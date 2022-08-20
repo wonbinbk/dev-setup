@@ -13,7 +13,6 @@ backup:
 .PHONY: configs
 configs: backup
 	make sync_configs
-	make _pyright
 	make _packer
 
 # #############################
@@ -21,9 +20,6 @@ configs: backup
 .PHONY: sync_configs
 sync_configs:
 	cp -rf ./nvim ~/.config/
-
-_pyright:
-	npm i -g pyright
 
 _packer:
 	# Install packer
